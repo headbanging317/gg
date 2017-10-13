@@ -30,13 +30,22 @@ def result(request):
         link += member_tag['href']
 
     title = ''
-    title2 = ['']
+    company = ['']
+    content = ['']
     titles = soup.find_all('strong', id='articleBodyContents')
-    print(soup)
 
-    for title_tag in soup.select('.company_inbox  li div div h2 a'):
-        title += title_tag.text
-    context = {'url':url, 'title':title}
+
+    contents = soup.select('.txt span a')
+
+    for title_tag in soup.select('.company_inbox li div div h2 a'):
+        company.append(title_tag.text)
+
+    print (contents)
+    for content_tag in contents:
+        content.append(content_tag.text)
+ 
+    
+    context = {'url':url, 'company':company, 'content':content}
  
     
     return render(request, 'search/result.html', context)

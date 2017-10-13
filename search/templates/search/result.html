@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">    
     <title>Document</title>
 </head>
 <body>
     <h3>result</h3>
-    <table>
+    <h2>주소 : {{url}}</h2>
+    <table border="1">
         <tr>
-            <th>주소</th>
+                {% for name in company %}
+                <th>
+                    {{name}}
+                </th>
+                {% endfor %}
         </tr>
         <tr>
-            <td>{{url}}</td>
-            <td>{{title}}</td>
+
+            {%for contents in content %}
+            <td>
+                {{contents}}
+            </td>
+            {% endfor %}
         </tr>
     </table>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 </body>
 </html>
