@@ -7,21 +7,20 @@ from requests import get
 from bs4 import BeautifulSoup
 import sys
 import chardet
-reload(sys)
-sys.setdefaultencoding('utf-8')
+
 # Create your views here.
 def index(request):
     return render(request, 'search/index.html')
 
 def result(request):
-    url = request.get('url')
+    url = request.GET.get('url')
     url2 = 'http://www.assembly.go.kr/assm/memact/congressman/memCond/memCondListAjax.do?currentPage=1&rowPerPage=300'
     url3 = url
     r = get(url)
     # html = requests.get(url3).text
     
 
-    soup = BeautifulSoup(r.content.decode('euc-kr', 'replace'))
+    soup = BeautifulSoup(r.content.decode('utf-8', 'replace'))
     
     
     name = ''
@@ -31,9 +30,11 @@ def result(request):
         link += member_tag['href']
 
     title = ''
+    title2 = ['']
     titles = soup.find_all('strong', id='articleBodyContents')
-    
-    for title_tag in soup.select('table tbody tr td p'):
+    print(soup)
+
+    for title_tag in soup.select('.company_inbox  li div div h2 a'):
         title += title_tag.text
     context = {'url':url, 'title':title}
  
