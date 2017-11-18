@@ -11,24 +11,39 @@
     <h3>result</h3>
     <br>{{url}}
     <h2>검색어 : {{keyWord}}</h2>
+    {% with name="world" greeting="name" %}
+    <h3>{{name}}</h3>
     <table border="1">
-        <tr>
-            {% for name in company %}
+            <tr>
                 <th>
-                    {{name}}
+                    회사명
                 </th>
-            {% endfor %}
-        </tr>
-        <tr>
-
+                <th>
+                    채용정보
+                </th>
+            </tr>   
+        {% for name in company %}
+            <tr>    
+                <td>
+                  {{ name }}
+                </td>
+                <td>
+                  {{ name }}
+                </td>
+            </tr>    
+        {% endfor %}
+       
+            <!-- <tr>
+ 
             {%for contents in content %}
                 <td>
                     {{contents}}
                 </td>
             {% endfor %}
-        </tr>
+        </tr> -->
     </table>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
+{% endwith %}
