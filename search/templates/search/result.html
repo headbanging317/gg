@@ -4,30 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">   
     <title>Document</title>
 </head>
 <body>
     <h3>result</h3>
-    <h2>주소 : {{url}}</h2>
+    <br>{{url}}
+    <h2>검색어 : {{keyWord}}</h2>
+    {% with name="world" greeting="name" %}
+    <h3>{{name}}</h3>
     <table border="1">
-        <tr>
-                {% for name in company %}
+            <tr>
                 <th>
-                    {{name}}
+                    회사명
                 </th>
-                {% endfor %}
-        </tr>
-        <tr>
-
+            </tr>   
+        {% for name in company %}
+            <tr>    
+                <td>
+                  {{ name }}
+                </td>
+            </tr>    
+        {% endfor %}
+        <!-- <tr>
             {%for contents in content %}
-            <td>
-                {{contents}}
-            </td>
+                <td>
+                    {{contents}}
+                </td>
             {% endfor %}
-        </tr>
+        </tr> -->
     </table>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    채용정보
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contents in content %}
+            <tr>
+                <td>
+                    {{ contents }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
+{% endwith %}
