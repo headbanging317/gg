@@ -17,7 +17,7 @@ def result(request):
     page = int(request.GET.get('page'))
     full2 = Full2.objects.all()
     company = {}
-    content = ['']
+    content = {}
     full = ['']
     dic = {'name':company, 'content':content}
   
@@ -56,7 +56,7 @@ def result(request):
         # print (contents)
         for content_tag in contents:
             # content.append(content_tag.text)
-            company[content_tag.text] = content_tag.get('href')
+            content[content_tag.text] = content_tag.get('href')
         # full = company + content
      
     

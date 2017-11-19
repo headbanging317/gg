@@ -18,15 +18,9 @@
                 <th>
                     회사명
                 </th>
-                <th>
-                    채용정보
-                </th>
             </tr>   
         {% for name in company %}
             <tr>    
-                <td>
-                  {{ name }}
-                </td>
                 <td>
                   {{ name }}
                 </td>
@@ -40,6 +34,25 @@
                 </td>
             {% endfor %}
         </tr> -->
+    </table>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    채용정보
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contents in content %}
+            <tr>
+                <td>
+                    {{ contents }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
     </table>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
