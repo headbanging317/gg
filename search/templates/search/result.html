@@ -43,12 +43,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }  */
- .table td.text {
+ .table td{
     max-width: 30px; 
     white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    
+    overflow: ellipsis;
+    /* display: inline-block; */
+    text-overflow: ellipsis;
     max-width: 100%;
 }
 /* .table td.text span {
@@ -66,11 +66,11 @@
     {% with name="world" greeting="name" %}
     <h3>사람인</h3>
     <div class="row">
-        <div class="col-xs-2 table1">
+        <div class="col-xs-2 table1 table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>
+                        <th class="text">
                             회사명
                         </th>
                     </tr>
@@ -87,7 +87,7 @@
             </table>
         </div>
 
-        <div class="col-xs-4 table2">
+        <div class="col-xs-4 table2 table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -108,7 +108,7 @@
                 </table>
         </div>
 
-        <div class="col-xs-2 table3">
+        <div class="col-xs-2 table3 table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -129,7 +129,7 @@
                 </table>
         </div>
 
-        <div class="col-xs-3 table4">
+        <div class="col-xs-3 table4 table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -155,7 +155,7 @@
 
     <h3>잡코리아</h3>
     <div class="row">
-            <div class="col-xs-2 table1">
+            <div class="col-xs-2 table1 table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -197,7 +197,7 @@
                     </table>
             </div>
     
-            <div class="col-xs-2 table3">
+            <div class="col-xs-2 table3 table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -218,7 +218,7 @@
                     </table>
             </div>
     
-            <div class="col-xs-3 table4">
+            <div class="col-xs-3 table4 table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -230,7 +230,7 @@
                         <tbody>
                             {% for details in detail_j %}
                                 <tr>
-                                    <td>
+                                    <td class="text">
                                         {{ details }}
                                     </td>
                                 </tr>
@@ -262,7 +262,7 @@
 <script>
     var s;
     s = document.querySelectorAll('a').values;
-    console.log(s)
+    console.log()
 </script>
 </html>
 {% endwith %}
