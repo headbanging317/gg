@@ -82,8 +82,8 @@ def result(request):
         #---------- jobkorea scrapping----------#
         companies_j = soup_j.select('.corpName .giTitle')
         contents_j = soup_j.select('.gibInfo .devSpcfcGI')
-        days_j = soup_j.select('.devSpcfcGI .gibDay')
-        details_j = soup_j.select('.gibDesc .devSpcfcGI')
+        days_j = soup_j.select('#smGiList .devSpcfcGI .gibDay')
+        details_j = soup_j.select('#smGiList .gibDesc .devSpcfcGI')
 
         for title_tag in companies_j:
             company_j.append(title_tag.text)
