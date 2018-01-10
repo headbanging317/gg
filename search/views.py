@@ -10,7 +10,7 @@ import chardet
 from .models import Full2
 # Create your views here.
 def index(request):
-    return render(request, 'search/index.html')
+    return render(request, 'search/search.html')
 
 def result(request):
     keyWord = request.GET.get('keyWord')
