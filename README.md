@@ -11,4 +11,4 @@ This webApp is a job search site based on web scraping by jobkorea and saramin
 1. Move to directory: ```cd gg```
 
 
-2. Run ```python manage.py runserver``` to see example at localhost:8000
+2. Run ```python manage.py runserver``` to see page at localhost:8000
