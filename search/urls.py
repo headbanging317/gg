@@ -5,4 +5,5 @@ urlpatterns = [
 
     url(r'^$', views.index),
     url(r'^search/', views.result), 
+    
 ]

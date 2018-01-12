@@ -3,19 +3,21 @@
 {% block extra_head %}
 <style>
 body{
-  background: #343d46;
+  background: #516c86;
 }
  
 .box{
   margin: 100px auto;
   width: 300px;
   height: 50px;
+ 
 }
 .container-1{
   width: 300px;
   vertical-align: middle;
   white-space: nowrap;
   position: relative;
+  
 }
 
 .container-1 input#search{
@@ -30,7 +32,7 @@ body{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-   
+    
      
     -webkit-transition: background .55s ease;
     -moz-transition: background .55s ease;
@@ -73,22 +75,30 @@ body{
 {% endblock %}
 
 {% block content %}
-<div class="box">
+
+<div class="box" border="1">
+    <h1>Happy job search!</h1>
     <div class="container-1">
-        <form action="search" method="GET">
-            <span class="icon"><i class="fa fa-search"></i></span>
-            <input type="search" id="search" placeholder="Search..." />
-            <input type="search" id="search" placeholder="page"/>
-        </form>
+        <form method="GET" action="search">
+            
+            <p>
+               <label for="keyWord">Company name</label></br>
+               <input type="text" id="keyWord" name="keyWord" required>
+            </p>
+           
+            
+            
+            <!-- <legend>Write the number of pages you want to see.</legend> -->
+            <fieldset>
+            <p>
+                <label for="page">Write the number of pages you want to see.</label></br>
+                <label for="page">(Saramin is 20 results per page, Jobkorea is 30)</label></br>
+                <input type="text" id="page" name="page" required>
+              </p>
+            <button type="submit" class="btn btn-primary">Search!</button>
+          </form>
     </div>
 </div>
-<!-- <div id="searchwrapper">
-<form action="search" method="GET">
-        검색어<input type="text" name="keyWord" id="keyWord" value="Search please">
-        <input type="image" src="THE_BLANK_SUBMIT_BUTTON_IMAGE" class="searchbox_submit" value="" />
-        <br>표시페이지<input type="text" name="page" id="page">
-        <br>
-        <button type="submit" id="button">확인</button>
-</form>
-</div> -->
+
+
 {% endblock %}

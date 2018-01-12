@@ -1,8 +1,7 @@
 {% extends 'search/base.html' %}
-
+<!-- {% load el_pagination_tags %} -->
 {% block extra_head %}
 <style>
-
     .table1 {
         /* float: left;
         border-left: none; */
@@ -63,6 +62,8 @@
     <h2>검색어 : {{keyWord}}</h2>
     {% with name="world" greeting="name" %}
     <h3>사람인</h3>
+
+    
     <div class="row">
         <div class="col-xs-2 table1 table-responsive">
             <table class="table table-striped">
@@ -72,8 +73,10 @@
                             회사명
                         </th>
                     </tr>
-                </thead>       
+                </thead>
+                
                 <tbody>
+                
                 {% for name in company_s %}
                     <tr>    
                         <td>
@@ -81,10 +84,11 @@
                         </td>
                     </tr>    
                 {% endfor %}
+                
                 </tbody>
+
             </table>
         </div>
-
         <div class="col-xs-4 table2 table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -237,6 +241,7 @@
                     </table>
             </div>                   
         </div>
+        
     <span>
         <!-- {% for name in company_j %}
             {{ name }}
