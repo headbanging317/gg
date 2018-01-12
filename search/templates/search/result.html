@@ -2,16 +2,14 @@
 <!-- {% load el_pagination_tags %} -->
 {% block extra_head %}
 <style>
+    body{
+        
+    }
     .table1 {
-        /* float: left;
-        border-left: none; */
-        /* table-layout: fixed;
-        word-wrap: break-word; */
+
         float: left;
     }
-    /* .something {
-        width: 90px;
-    } */
+
     .table1 {
         padding-right :0px;
     }
@@ -27,16 +25,8 @@
     .table4 {
         padding-left :0px;
     }
-    #asd {
-        /* overflow:hidden; */
-    }
 
    
-     /* .table td {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}  */
  .table td{
     max-width: 30px; 
     white-space: nowrap;
@@ -57,8 +47,8 @@
 
 {% block content %}
 
-    <h3>result</h3>
-    <br>{{url}}
+
+    <!-- <br>{{url}} -->
     <h2>검색어 : {{keyWord}}</h2>
     {% with name="world" greeting="name" %}
     <h3>사람인</h3>
@@ -262,10 +252,5 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     {% endwith %}
-    <script>
-            var s;
-            s = document.querySelectorAll('a').values;
-            console.log()
-        </script>
-        
+
 {% endblock %}
