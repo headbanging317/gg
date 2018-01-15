@@ -13,3 +13,10 @@
 
 
 2. Run ```python manage.py runserver``` to see main page at localhost:8000
+
+
+## What i learned
+
+* CORS issue
+* python base
+* scraping base
