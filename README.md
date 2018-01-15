@@ -24,8 +24,10 @@
 
 ## Look
 
+Main image
 ![1](./images/mainGG.JPG)
 
+Result images
 ![2](./images/resultGG.JPG)
 
 ![3](./images/resultGG2.JPG)
