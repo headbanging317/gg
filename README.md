@@ -38,5 +38,5 @@ Result images
 ## Improvements
 
 * Resultpage pagination
-* resultpage UI design
+* Resultpage UI design
 
