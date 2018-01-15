@@ -1,6 +1,6 @@
 # GG
 
-This webApp is a job search site based on web scraping by jobkorea and saramin
+* This webApp is a job search site based on web scraping by jobkorea and saramin
 * This is a scraping project using python library requests
 
 ## Stack
