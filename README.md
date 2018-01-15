@@ -20,3 +20,12 @@
 * CORS issue
 * python base
 * scraping base
+
+
+## Look
+
+![1](./images/mainGG.JPG)
+
+![2](./images/resultGG.JPG)
+
+![3](./images/resultGG2.JPG)
