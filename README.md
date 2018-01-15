@@ -34,3 +34,9 @@ Result images
 
 
 ![3](./images/resultGG2.JPG)
+
+## Improvements
+
+* Resultpage pagination
+* resultpage UI design
+
