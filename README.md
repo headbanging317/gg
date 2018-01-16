@@ -31,8 +31,6 @@ Main image
 Result images
 ![2](./images/resultGG.JPG)
 
-
-
 ![3](./images/resultGG2.JPG)
 
 ## Improvements
